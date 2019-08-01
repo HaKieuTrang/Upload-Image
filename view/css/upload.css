@@ -1,0 +1,27 @@
+section{
+    text-align: center;
+}
+
+label{
+    margin-top: 2cm;
+    font-size: 25px;
+}
+
+#img-upload{
+    width: 100%;
+}
+
+#cap{
+    font-size: 20px;
+    float: left;
+}
+
+#btn{
+    padding: 7px 30px;
+    font-size: 15px;
+    border-radius: 7px;
+}
+
+#imgInp{
+    font-size: 25px;
+}
