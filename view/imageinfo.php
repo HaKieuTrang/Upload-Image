@@ -2,9 +2,14 @@
 
 use Web\Model\Database\Connection;
 use Web\Model\Image\Image;
+use Web\Model\User\User;
+use Web\Controller\Image\AddComment;
 
 include '../Model/Database/Connection.php';
 include '../Model/Image/Image.php';
+include '../Model/User/User.php';
+include '../Controller/Image/AddComment.php';
+
 session_start();
 $imageName = $_GET['name'];
 $conn = new Connection();
@@ -12,6 +17,29 @@ $result = new Image($conn);
 $info = $result->getInfoByName($imageName);
 $imageId = $info[0]['image_id'];
 $userName = $result->getUserByImage($imageId);
+
+$userCmt = new User($conn);
+$userNameCmt = $_SESSION['name'];
+$userCmtId = $userCmt->getIdByName($userNameCmt);
+
+$add = new AddComment($conn);
+$getCmt = $add->getCmtByImageId($imageId);
+
+if (isset($_POST['btCmt'])) {
+    $comment = $_POST['cmt'];
+    $addComment = $add->addCmt($userCmtId, $imageId, $comment);
+    if ($addComment) {
+        $getCmt = $add->getCmtByImageId($imageId);
+        echo "<script language='javascript'>
+           alert('Đã bình luận!')
+           </script>";
+    } else {
+        echo "<script language='javascript'>
+           alert('Không bình luận được!')
+           </script>";
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -69,13 +97,22 @@ $userName = $result->getUserByImage($imageId);
 
     <div class="comment">
         <p>Bình luận của mọi người:</p>
-        <textarea rows="25" cols="45" readonly="readonly"></textarea><br>
-        <p>Viết bình luận của bạn:</p>
-        <textarea rows="4" cols="45"></textarea><br>
-        <div id="btn">
-            <button class="btn">Like Image</button>
-            <button class="btn">Comment</button>
-        </div>
+        <form method="POST">
+            <textarea rows="25" cols="45" readonly="readonly" name="loadCmt">
+                <?php
+                while ($row = mysqli_fetch_array($getCmt)) {
+                    echo "\n- ".$row['comment'];
+                }
+                ?>
+            </textarea><br>
+            <p>Viết bình luận của bạn:</p>
+
+            <textarea rows="4" cols="47" name="cmt"></textarea><br>
+            <div id="btn">
+                <button class="btn" id="btLike">Like Image</button>
+                <input type="submit" class="btn" name="btCmt" value="Comment">
+            </div>
+        </form>
 
     </div>
 

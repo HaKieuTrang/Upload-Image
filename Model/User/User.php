@@ -42,4 +42,12 @@ class User
         }
         return $result;
     }
+
+    public function getIdByName($name){
+        $userSql = $this->_connection->query("SELECT user_id FROM Information_User WHERE name = '$name'");
+        foreach ($userSql as $value){
+            $userId = $value['user_id'];
+        }
+        return $userId;
+    }
 }

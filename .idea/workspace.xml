@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeaaed83-9b0d-43d2-a6e1-c605ad23e405" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/view/css/imageinfo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/User/Logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/User/Logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/Image/AddComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Image/AddComment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/css/imageinfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/css/imageinfo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/imageinfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/imageinfo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/upload/1979224ad97077a1e3da94b6a324b22f.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/upload/29d7cc725d2a8f3b139a657dce3b626a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/upload/e25a77c961f4c8b14dc6e8961e777c82.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/imageinfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="74" column="20" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
+            <state relative-caret-position="108">
+              <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
               <folding>
                 <element signature="e#6#40#0#PHP" expanded="true" />
               </folding>
@@ -68,10 +64,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/view/css/imageinfo.css">
+        <entry file="file://$PROJECT_DIR$/Controller/Image/AddComment.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
-              <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/User/Signin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-152">
+              <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="43" />
+              <folding>
+                <element signature="e#38#72#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/css/imageinfo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -124,8 +141,9 @@
         <option value="$PROJECT_DIR$/view/userinfo2.php" />
         <option value="$PROJECT_DIR$/Controller/User/Logout.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/view/imageinfo.php" />
         <option value="$PROJECT_DIR$/view/css/imageinfo.css" />
+        <option value="$PROJECT_DIR$/view/imageinfo.php" />
+        <option value="$PROJECT_DIR$/Controller/Image/AddComment.php" />
       </list>
     </option>
   </component>
@@ -220,7 +238,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Web" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -295,12 +313,12 @@
       <workItem from="1564491404252" duration="599000" />
       <workItem from="1564553904710" duration="6219000" />
       <workItem from="1564672946890" duration="3805000" />
-      <workItem from="1564717836872" duration="4718000" />
+      <workItem from="1564717836872" duration="6075000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136659000" />
+    <option name="totallyTimeSpent" value="138016000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -313,9 +331,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="25" width="1545" height="875" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10607071" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17411608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -362,7 +379,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/css/signup/main.css" />
     <entry file="file://$PROJECT_DIR$/view/css/reset.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -454,16 +470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/User/Signin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding>
-            <element signature="e#38#72#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -577,10 +583,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/User/Signin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-152">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="43" />
+          <folding>
+            <element signature="e#38#72#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/view/imageinfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="74" column="20" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
+        <state relative-caret-position="108">
+          <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
           <folding>
             <element signature="e#6#40#0#PHP" expanded="true" />
           </folding>
@@ -589,8 +605,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/css/imageinfo.css">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/Image/AddComment.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
     </entry>
