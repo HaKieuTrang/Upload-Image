@@ -1,0 +1,14 @@
+.comment{
+    position:fixed;
+    right:36px;
+    top: 0px;
+}
+.btn{
+    padding: 7px 8px;
+    font-size: 15px;
+    border-radius: 7px;
+}
+#btn{
+    position: fixed;
+    right: 150px;
+}

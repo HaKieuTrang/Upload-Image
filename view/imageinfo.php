@@ -1,6 +1,8 @@
 <?php
+
 use Web\Model\Database\Connection;
 use Web\Model\Image\Image;
+
 include '../Model/Database/Connection.php';
 include '../Model/Image/Image.php';
 session_start();
@@ -18,11 +20,13 @@ $userName = $result->getUserByImage($imageId);
     <title>Image info</title>
     <meta charset="utf-8">
     <meta name="author" content="pixelhint.com">
-    <meta name="description" content="Magnetic is a stunning responsive HTML5/CSS3 photography/portfolio website  template"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="description"
+          content="Magnetic is a stunning responsive HTML5/CSS3 photography/portfolio website  template"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/title.css">
+    <link rel="stylesheet" type="text/css" href="css/imageinfo.css">
     <script type="text/javascript" src="js/homepage/jquery.js"></script>
     <script type="text/javascript" src="js/homepage/main.js"></script>
 </head>
@@ -55,15 +59,31 @@ $userName = $result->getUserByImage($imageId);
             <p>Copyright © 2014 magnetic.</p>
             <p>Template by <a href="">Pixelhint.com</a></p>
         </div><!-- end rights -->
-    </div ><!-- end footer -->
+    </div><!-- end footer -->
 </header><!-- end header -->
 
 <section class="main clearfix">
-    <img src="<?php echo $_GET['name']?>" height="600"/>
     <div>
-        Người đăng: <a href="userinfo2.php<?php echo"?name=".$userName[0]['name']?>"> <?php echo $userName[0]['name']?></a><br>
-        Caption: <?php echo $info[0]['caption']?><br>
-        Ngày đăng: <?php echo $info[0]['date']?>
+        <img src="<?php echo $_GET['name'] ?>" width="800"/>
+    </div>
+
+    <div class="comment">
+        <p>Bình luận của mọi người:</p>
+        <textarea rows="25" cols="45" readonly="readonly"></textarea><br>
+        <p>Viết bình luận của bạn:</p>
+        <textarea rows="4" cols="45"></textarea><br>
+        <div id="btn">
+            <button class="btn">Like Image</button>
+            <button class="btn">Comment</button>
+        </div>
+
+    </div>
+
+    <div>
+        Người đăng: <a
+                href="userinfo2.php<?php echo "?name=" . $userName[0]['name'] ?>"> <?php echo $userName[0]['name'] ?></a><br>
+        Caption: <?php echo $info[0]['caption'] ?><br>
+        Ngày đăng: <?php echo $info[0]['date'] ?>
     </div>
 </section><!-- end main -->
 
