@@ -43,7 +43,7 @@ echo $name;
             <li><a href="../index.php" class="selected">Home</a></li>
             <li><a href="userinfo.php">Profile</a></li>
             <li><a href="upload.php">Upload</a></li>
-            <li><a href="signin.php">Log out</a></li>
+            <li><a href="../Controller/User/Logout.php">Log out</a></li>
         </ul>
     </nav><!-- end navigation menu -->
 

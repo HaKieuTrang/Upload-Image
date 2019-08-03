@@ -24,20 +24,19 @@ $userCmtId = $userCmt->getIdByName($userNameCmt);
 
 $add = new AddComment($conn);
 $getCmt = $add->getCmtByImageId($imageId);
-
-if (isset($_POST['btCmt'])) {
-    $comment = $_POST['cmt'];
-    $addComment = $add->addCmt($userCmtId, $imageId, $comment);
-    if ($addComment) {
-        $getCmt = $add->getCmtByImageId($imageId);
-        echo "<script language='javascript'>
-           alert('Đã bình luận!')
-           </script>";
-    } else {
-        echo "<script language='javascript'>
-           alert('Không bình luận được!')
-           </script>";
-    }
+$comment = $_POST['cmt'];
+if (isset($_POST['btCmt']) && $comment != "") {
+   $addComment = $add->addCmt($userCmtId, $imageId, $comment);
+   if ($addComment) {
+    $getCmt = $add->getCmtByImageId($imageId);
+    echo "<script language='javascript'>
+    alert('Đã bình luận!')
+    </script>";
+} else {
+    echo "<script language='javascript'>
+    alert('Không bình luận được!')
+    </script>";
+}
 }
 
 ?>
@@ -49,7 +48,7 @@ if (isset($_POST['btCmt'])) {
     <meta charset="utf-8">
     <meta name="author" content="pixelhint.com">
     <meta name="description"
-          content="Magnetic is a stunning responsive HTML5/CSS3 photography/portfolio website  template"/>
+    content="Magnetic is a stunning responsive HTML5/CSS3 photography/portfolio website  template"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -60,69 +59,69 @@ if (isset($_POST['btCmt'])) {
 </head>
 <body>
 
-<header>
-    <div class="title">
-        <p>IMAGE INFO</p>
-    </div><!-- end logo -->
+    <header>
+        <div class="title">
+            <p>IMAGE INFO</p>
+        </div><!-- end logo -->
 
-    <div id="menu_icon"></div>
-    <nav>
-        <ul>
-            <li><a href="../index.php">Home</a></li>
-            <li><a href="userinfo.php">Profile</a></li>
-            <li><a href="upload.php">Upload</a></li>
-            <li><a href="signin.php">Logout</a></li>
-        </ul>
-    </nav><!-- end navigation menu -->
+        <div id="menu_icon"></div>
+        <nav>
+            <ul>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="userinfo.php">Profile</a></li>
+                <li><a href="upload.php">Upload</a></li>
+                <li><a href="../Controller/User/Logout.php">Logout</a></li>
+            </ul>
+        </nav><!-- end navigation menu -->
 
-    <div class="footer clearfix">
-        <ul class="social clearfix">
-            <li><a href="#" class="fb" data-title="Facebook"></a></li>
-            <li><a href="#" class="google" data-title="Google +"></a></li>
-            <li><a href="#" class="behance" data-title="Behance"></a></li>
-            <li><a href="#" class="rss" data-title="RSS"></a></li>
-        </ul><!-- end social -->
+        <div class="footer clearfix">
+            <ul class="social clearfix">
+                <li><a href="#" class="fb" data-title="Facebook"></a></li>
+                <li><a href="#" class="google" data-title="Google +"></a></li>
+                <li><a href="#" class="behance" data-title="Behance"></a></li>
+                <li><a href="#" class="rss" data-title="RSS"></a></li>
+            </ul><!-- end social -->
 
-        <div class="rights">
-            <p>Copyright © 2014 magnetic.</p>
-            <p>Template by <a href="">Pixelhint.com</a></p>
-        </div><!-- end rights -->
-    </div><!-- end footer -->
-</header><!-- end header -->
+            <div class="rights">
+                <p>Copyright © 2014 magnetic.</p>
+                <p>Template by <a href="">Pixelhint.com</a></p>
+            </div><!-- end rights -->
+        </div><!-- end footer -->
+    </header><!-- end header -->
 
-<section class="main clearfix">
-    <div>
-        <img src="<?php echo $_GET['name'] ?>" width="800"/>
-    </div>
+    <section class="main clearfix">
+        <div>
+            <img src="<?php echo $_GET['name'] ?>" width="800"/>
+        </div>
 
-    <div class="comment">
-        <p>Bình luận của mọi người:</p>
-        <form method="POST">
-            <textarea rows="25" cols="45" readonly="readonly" name="loadCmt">
-                <?php
-                while ($row = mysqli_fetch_array($getCmt)) {
-                    echo "\n- ".$row['comment'];
-                }
-                ?>
-            </textarea><br>
-            <p>Viết bình luận của bạn:</p>
+        <div class="comment">
+            <p>Bình luận của mọi người:</p>
+            <form method="POST">
+                <textarea rows="24" cols="40" readonly="readonly" name="loadCmt">
+                    <?php
+                    while ($row = mysqli_fetch_array($getCmt)) {
+                        echo "\n- ".$row['comment'];
+                    }
+                    ?>
+                </textarea><br>
+                <p>Viết bình luận của bạn:</p>
 
-            <textarea rows="4" cols="47" name="cmt"></textarea><br>
-            <div id="btn">
-                <button class="btn" id="btLike">Like Image</button>
-                <input type="submit" class="btn" name="btCmt" value="Comment">
-            </div>
-        </form>
+                <textarea rows="4" cols="40" name="cmt"></textarea><br>
+                <div id="btn">
+                    <button class="btn" id="btLike">Like Image</button>
+                    <input type="submit" class="btn" name="btCmt" value="Comment">
+                </div>
+            </form>
 
-    </div>
+        </div>
 
-    <div>
-        Người đăng: <a
-                href="userinfo2.php<?php echo "?name=" . $userName[0]['name'] ?>"> <?php echo $userName[0]['name'] ?></a><br>
-        Caption: <?php echo $info[0]['caption'] ?><br>
-        Ngày đăng: <?php echo $info[0]['date'] ?>
-    </div>
-</section><!-- end main -->
+        <div>
+            Người đăng: <a
+            href="userinfo2.php<?php echo "?name=" . $userName[0]['name'] ?>"> <?php echo $userName[0]['name'] ?></a><br>
+            Caption: <?php echo $info[0]['caption'] ?><br>
+            Ngày đăng: <?php echo $info[0]['date'] ?>
+        </div>
+    </section><!-- end main -->
 
 </body>
 </html>

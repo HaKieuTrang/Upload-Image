@@ -1,6 +1,6 @@
 .comment{
     position:fixed;
-    right:36px;
+    right:33px;
     top: 0px;
 }
 .btn{
@@ -11,4 +11,7 @@
 #btn{
     position: fixed;
     right: 150px;
+}
+textarea{
+    font-size: 17px;
 }

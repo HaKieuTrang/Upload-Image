@@ -38,7 +38,7 @@ $result = $conn->query("SELECT name FROM Information_Image");
             <li><a href="index.php" class="selected">Home</a></li>
             <li><a href="view/userinfo.php">Profile</a></li>
             <li><a href="view/upload.php">Upload</a></li>
-            <li><a href="view/signin.php">Log out</a></li>
+            <li><a href="Controller/User/Logout.php">Log out</a></li>
         </ul>
     </nav><!-- end navigation menu -->
 

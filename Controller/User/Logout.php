@@ -9,6 +9,7 @@ class logout
 
 }
 session_start();
-return header("Location:../../index.php");
+unset($_SESSION['name']);
 session_destroy();
-
+header("Location: /Web/index.php");
+exit;

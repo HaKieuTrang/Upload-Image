@@ -29,11 +29,6 @@ if (isset($_POST['submit'])) {
           $conn->query("INSERT INTO User_Photos ( image_id, user_id )  VALUES ('{$imgId}', '{$userId}')");
     }
 
-
-
-
-
-
 }
 ?>
 
@@ -70,7 +65,7 @@ if (isset($_POST['submit'])) {
             <li><a href="../index.php" class="selected">Home</a></li>
             <li><a href="userinfo.php">Profile</a></li>
             <li><a href="upload.php">Upload</a></li>
-            <li><a href="signin.php">Log out</a></li>
+            <li><a href="../Controller/User/Logout.php">Log out</a></li>
         </ul>
     </nav><!-- end navigation menu -->
 
