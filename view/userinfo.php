@@ -7,7 +7,12 @@ use Web\Model\User\User;
 include '../Model/Database/Connection.php';
 include '../Model/User/User.php';
 
-$name = $_SESSION['name'];
+if(!$_GET['name']){
+    $name = $_SESSION['name'];
+} else {
+    $name = $_GET['name'];
+}
+
 $conn = new Connection();
 $result = new User($conn);
 $image = $result->loadImageByName($name);
@@ -42,7 +47,7 @@ $image = $result->loadImageByName($name);
 
 <section class="main clearfix">
     <div class="header">
-        <?php echo "Trang cá nhân của " . $_SESSION['name']; ?>
+         <p>Trang cá nhân của <span style="color: #fa2d46"><?php echo $name; ?></span></p>
     </div>
 
     <?php foreach ($image as $value): ?>

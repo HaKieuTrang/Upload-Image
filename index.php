@@ -31,7 +31,7 @@ $result = $conn->query("SELECT name FROM Information_Image");
 
 <section class="main clearfix">
     <div class="header">
-        <p>Chào mừng <?php echo $_SESSION['name'] ?> đến với trang chia sẻ ảnh</p>
+       <p>Chào mừng <span style="color: #fa2d46"><?php echo $_SESSION['name'] ?></span> đến với trang chia sẻ ảnh</p>
     </div>
     <?php foreach ($result as $image): ?>
     <div class="work">

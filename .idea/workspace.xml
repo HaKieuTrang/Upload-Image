@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aeaaed83-9b0d-43d2-a6e1-c605ad23e405" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/Image/AddComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Image/AddComment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/User/Logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/User/Logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/User/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/css/imageinfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/css/imageinfo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/imageinfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/imageinfo.php" afterDir="false" />
-    </list>
+    <list default="true" id="aeaaed83-9b0d-43d2-a6e1-c605ad23e405" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/css/imageinfo.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="288">
+              <caret line="16" column="42" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -200,7 +192,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Web" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -276,12 +268,12 @@
       <workItem from="1564553904710" duration="6219000" />
       <workItem from="1564672946890" duration="3805000" />
       <workItem from="1564717836872" duration="6075000" />
-      <workItem from="1564815934963" duration="1130000" />
+      <workItem from="1564815934963" duration="1395000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139146000" />
+    <option name="totallyTimeSpent" value="139411000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -294,7 +286,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="25" width="1545" height="875" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17945297" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -567,8 +558,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/css/imageinfo.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        <state relative-caret-position="288">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="42" />
         </state>
       </provider>
     </entry>

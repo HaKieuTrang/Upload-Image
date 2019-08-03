@@ -97,7 +97,7 @@ if (isset($_POST['btCmt']) && $comment != "") {
 
     <div>
         Người đăng: <a
-                href="userinfo2.php<?php echo "?name=" . $userName[0]['name'] ?>"> <?php echo $userName[0]['name'] ?></a><br>
+                href="userinfo.php<?php echo "?name=" . $userName[0]['name'] ?>"> <?php echo $userName[0]['name'] ?></a><br>
         Caption: <?php echo $info[0]['caption'] ?><br>
         Ngày đăng: <?php echo $info[0]['date'] ?>
     </div>
