@@ -16,7 +16,7 @@ class AddComment
     }
 
     public function getCmtByImageId($imageId){
-        $result = $this->_connection->query1("SELECT comment FROM Comment WHERE image_id = '$imageId'");
+        $result = $this->_connection->query1("SELECT comment, user_id FROM Comment WHERE image_id = '$imageId'");
         return $result;
     }
 }

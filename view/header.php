@@ -9,12 +9,12 @@
         <ul>
             <li><a href="/btl/index.php" class="selected">Home</a></li>
             <?php if(isset($_SESSION['name'])){?>
-            <li><a href="/Web/view/userinfo.php">Profile</a></li>
-            <li><a href="/Web/view/upload.php">Upload</a></li>
-            <li><a href="/Web/Controller/User/Logout.php">Log out</a></li>
+            <li><a href="/btl/view/userinfo.php">Profile</a></li>
+            <li><a href="/btl/view/upload.php">Upload</a></li>
+            <li><a href="/btl/Controller/User/Logout.php">Log out</a></li>
             <?php }else { ?>
-                <li><a href="/Web/view/signin.php">Log in</a></li>
-                <li><a href="/Web/view/signup.php">Sign up</a></li>
+                <li><a href="/btl/view/signin.php">Log in</a></li>
+                <li><a href="/btl/view/signup.php">Sign up</a></li>
             <?php } ?>
 
         </ul>

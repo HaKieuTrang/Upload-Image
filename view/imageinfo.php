@@ -26,17 +26,17 @@ $add = new AddComment($conn);
 $getCmt = $add->getCmtByImageId($imageId);
 $comment = $_POST['cmt'];
 if (isset($_POST['btCmt']) && $comment != "") {
-   $addComment = $add->addCmt($userCmtId, $imageId, $comment);
-   if ($addComment) {
-    $getCmt = $add->getCmtByImageId($imageId);
-    echo "<script language='javascript'>
-    alert('Đã bình luận!')
-    </script>";
-} else {
-    echo "<script language='javascript'>
-    alert('Không bình luận được!')
-    </script>";
-}
+    $addComment = $add->addCmt($userCmtId, $imageId, $comment);
+    if ($addComment) {
+        $getCmt = $add->getCmtByImageId($imageId);
+        echo "<script language='javascript'>
+           alert('Đã bình luận!')
+           </script>";
+    } else {
+        echo "<script language='javascript'>
+           alert('Không bình luận được!')
+           </script>";
+    }
 }
 
 ?>
@@ -48,7 +48,7 @@ if (isset($_POST['btCmt']) && $comment != "") {
     <meta charset="utf-8">
     <meta name="author" content="pixelhint.com">
     <meta name="description"
-    content="Magnetic is a stunning responsive HTML5/CSS3 photography/portfolio website  template"/>
+          content="Magnetic is a stunning responsive HTML5/CSS3 photography/portfolio website  template"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -56,50 +56,51 @@ if (isset($_POST['btCmt']) && $comment != "") {
     <link rel="stylesheet" type="text/css" href="css/imageinfo.css">
     <script type="text/javascript" src="js/homepage/jquery.js"></script>
     <script type="text/javascript" src="js/homepage/main.js"></script>
+
+
 </head>
 <body>
 
-    <header>
-        <div class="title">
-            <p>IMAGE INFO</p>
-        </div><!-- end logo -->
+<header>
+    <div class="title">
+        <p>IMAGE INFO</p>
+    </div><!-- end logo -->
+    <?php include 'header.php' ?>
+</header><!-- end header -->
 
-        <?php include 'header.php' ?>
-    </header><!-- end header -->
+<section class="main clearfix">
+    <div>
+        <img src="<?php echo $_GET['name'] ?>" width="800"/>
+    </div>
 
-    <section class="main clearfix">
-        <div>
-            <img src="<?php echo $_GET['name'] ?>" width="800"/>
-        </div>
+    <div class="comment">
+        <p>Bình luận của mọi người:</p>
+        <form method="POST">
+            <textarea rows="14" cols="33" readonly="readonly" name="loadCmt" id="listcmt">
+                <?php
+                while ($row = mysqli_fetch_array($getCmt)) {
+                    $name = $userCmt->getNameById($row['user_id']);
+                    echo "\n".$name.": ".$row['comment'];
+                }
+                ?>
+            </textarea><br>
+            <p>Viết bình luận của bạn:</p>
 
-        <div class="comment">
-            <p>Bình luận của mọi người:</p>
-            <form method="POST">
-                <textarea rows="24" cols="40" readonly="readonly" name="loadCmt">
-                    <?php
-                    while ($row = mysqli_fetch_array($getCmt)) {
-                        echo "\n- ".$row['comment'];
-                    }
-                    ?>
-                </textarea><br>
-                <p>Viết bình luận của bạn:</p>
+            <textarea rows="4" cols="33" name="cmt" id="cmt"></textarea><br><br>
+            <div id="btn">
+                <button class="btn" id="btLike">Like Image</button>
+                <input type="submit" class="btn" name="btCmt" id="btCmt" value="Comment">
+            </div>
+        </form>
 
-                <textarea rows="4" cols="40" name="cmt"></textarea><br>
-                <div id="btn">
-                    <button class="btn" id="btLike">Like Image</button>
-                    <input type="submit" class="btn" name="btCmt" value="Comment">
-                </div>
-            </form>
+    </div>
 
-        </div>
-
-        <div>
-            Người đăng: <a
-            href="userinfo2.php<?php echo "?name=" . $userName[0]['name'] ?>"> <?php echo $userName[0]['name'] ?></a><br>
-            Caption: <?php echo $info[0]['caption'] ?><br>
-            Ngày đăng: <?php echo $info[0]['date'] ?>
-        </div>
-    </section><!-- end main -->
-
+    <div>
+        Người đăng: <a
+                href="userinfo2.php<?php echo "?name=" . $userName[0]['name'] ?>"> <?php echo $userName[0]['name'] ?></a><br>
+        Caption: <?php echo $info[0]['caption'] ?><br>
+        Ngày đăng: <?php echo $info[0]['date'] ?>
+    </div>
+</section><!-- end main -->
 </body>
 </html>
