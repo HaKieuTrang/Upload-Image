@@ -64,29 +64,7 @@ if (isset($_POST['btCmt']) && $comment != "") {
             <p>IMAGE INFO</p>
         </div><!-- end logo -->
 
-        <div id="menu_icon"></div>
-        <nav>
-            <ul>
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="userinfo.php">Profile</a></li>
-                <li><a href="upload.php">Upload</a></li>
-                <li><a href="../Controller/User/Logout.php">Logout</a></li>
-            </ul>
-        </nav><!-- end navigation menu -->
-
-        <div class="footer clearfix">
-            <ul class="social clearfix">
-                <li><a href="#" class="fb" data-title="Facebook"></a></li>
-                <li><a href="#" class="google" data-title="Google +"></a></li>
-                <li><a href="#" class="behance" data-title="Behance"></a></li>
-                <li><a href="#" class="rss" data-title="RSS"></a></li>
-            </ul><!-- end social -->
-
-            <div class="rights">
-                <p>Copyright © 2014 magnetic.</p>
-                <p>Template by <a href="">Pixelhint.com</a></p>
-            </div><!-- end rights -->
-        </div><!-- end footer -->
+        <?php include 'header.php' ?>
     </header><!-- end header -->
 
     <section class="main clearfix">
